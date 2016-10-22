@@ -12,7 +12,7 @@ public class Main {
         InetSocketAddress inetSocketAddress = new InetSocketAddress(8080);
         server.bind(inetSocketAddress,0);
 
-        server.createContext("/hello",new FormFileLoadHandler());
+        server.createContext("/",new FormFileLoadHandler());
         server.createContext("/upload",new FileLoadHandler());
         server.start();
 
